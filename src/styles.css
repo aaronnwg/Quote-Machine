@@ -1,0 +1,22 @@
+
+header {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+
+#quote-box {
+    width: 450px;
+    height: 300px;
+    border-radius: 5px;
+    border: black;
+    background-color: aqua;
+    margin: 0 auto;
+}
+
+#twitter {
+    height: 30px;
+    width: auto;
+
+}
