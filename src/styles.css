@@ -12,10 +12,16 @@ header {
     border-radius: 5px;
     border: black solid 10px;;
     margin: 0 auto;
+
 }
 
 #twitter {
     height: 30px;
     width: auto;
 
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
 }

@@ -1,87 +1,57 @@
-
-//quote variables
-const quoteOne = '1';
-const quoteTwo = '2';
-const quoteThree = '3';
-const quoteFour = '4';
-const quoteFive = '5';
-const quoteSix = '6';
-
-//colors
-var colors = [
-    '#16a085',
-    '#27ae60',
-    '#2c3e50',
-    '#f39c12',
-    '#e74c3c',
-    '#9b59b6',
-    '#FB6964',
-    '#342224',
-    '#472E32',
-    '#BDBB99',
-    '#77B1A9',
-    '#73A857'
-  ];
-  
-
-//botton variable
-const newQuote = document.getElementById('new-quote');
-
-//quotes array
-const quotes = [quoteOne, quoteTwo, quoteThree, quoteFour, quoteFive, quoteSix];
-
-const quoteFunction = () => {
-    //randomize quotes
-    let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    //randomize colors
-    //let color = Math.floor(Math.random() * colors.length);
-
-    document.getElementById('text').innerHTML = randomQuote;
-     /* $(document).ready(function() {
-        $("#quote-box").addClass("animated bounce");
-      })
    
-    */   }
-newQuote.onclick = quoteFunction;
-
 $(document).ready(() => {
+  //variables
   const $newQuote = $('#new-quote');
-  const $quoteBox = $('#quote-box');
+  const $quoteText = $('#text');
+  const $authorText = ('#author');
+//quote variables
+const $quoteOne = '1';
+const $quoteTwo = '2';
+const $quoteThree = '3';
+const $quoteFour = '4';
+const $quoteFive = '5';
+const $quoteSix = '6';
+//author variables
+const $authorOne = 'one';
+const $authorTwo = 'two';
+const $authorThree = 'three';
+const $authorFour = 'four';
+const $authorFive = 'five';
+const $authorSix = 'six';
 
+//quotes Array
+const $quotes = [$quoteOne, $quoteTwo, $quoteThree, $quoteFour, $quoteFive, $quoteSix];
+  //handlers
   $newQuote.on('click', () => {
-    $quoteBox.css('color', 'purple');
+    //randomize quotes
+    let $randomQuote = $quotes[Math.floor(Math.random() * $quotes.length)];
+    //match quote to author
+    switch($randomQuote) {
+      case $quoteOne:
+        var $author = $authorOne;
+        break;
+      case $quoteTwo:
+        var $author = $authorTwo;
+        break;
+      case $quoteThree:
+        var $author = $authorThree;
+        break;
+      case $quoteFour:
+        var $author = $authorFour;
+        break;
+      case $quoteFive:
+        var $author = $authorFive;
+        break; 
+      case $quoteSix:
+        var $author = $authorSix;
+        break;
+      default:
+        var $author = '';
+    }
+    //generate quote
+    $quoteText.text($randomQuote);
+    //generate author
+    $authorText.text($author)
   })
 })
 
-/* $('html body').animate(
-        {
-          backgroundColor: colors[color],
-          color: colors[color]
-        },
-        1000
-      );
-      $("#newQuote").animate(
-        {
-          backgroundColor: colors[color]
-        },
-        1000
-      );
-      $("#newQuote").addClass("animated bounce");
-    
-    };
-      $(document).ready(function() {
-        $('html body').animate(
-            {
-              backgroundColor: colors[color],
-              color: colors[color]
-            },
-            1000
-          );
-          $("#newQuote").animate(
-            {
-              backgroundColor: colors[color]
-            },
-            1000
-          );
-          $("#newQuote").addClass("animated bounce");
-          });*/
