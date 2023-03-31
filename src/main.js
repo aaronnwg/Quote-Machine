@@ -3,7 +3,7 @@ $(document).ready(() => {
   //variables
   const $newQuote = $('#new-quote');
   const $quoteText = $('#text');
-  const $authorText = ('#author');
+  const $authorText = $('#author');
 //quote variables
 const $quoteOne = '1';
 const $quoteTwo = '2';
@@ -53,5 +53,6 @@ const $quotes = [$quoteOne, $quoteTwo, $quoteThree, $quoteFour, $quoteFive, $quo
     //generate author
     $authorText.text($author)
   })
+
 })
 
