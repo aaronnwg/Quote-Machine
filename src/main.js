@@ -15,15 +15,15 @@ const $quoteSeven = "When the whole world is silent, even one voice becomes powe
 const $quoteEight = "If you obey all the rules, you miss all the fun.";
 const $quoteNine =  "Letting go gives us freedom, and freedom is the only condition for happiness. If, in our heart, we still cling to anything - anger, anxiety, or possessions - we cannot be free.";
 //author variables
-const $authorOne = "Buddha";
-const $authorTwo = "Thomas Jefferson";
-const $authorThree = "Henry David Thoreau";
-const $authorFour = "Henry Ford";
-const $authorFive = "Lao Tzu";
-const $authorSix = "Alan Watts";
-const $authorSeven = "Malala Yousafzai";
-const $authorEight = "Katherine Hepburn";
-const $authorNine = "Thich Nhat Hanh"; 
+const $authorOne = " -Buddha";
+const $authorTwo = " -Thomas Jefferson";
+const $authorThree = " -Henry David Thoreau";
+const $authorFour = " -Henry Ford";
+const $authorFive = " -Lao Tzu";
+const $authorSix = " -Alan Watts";
+const $authorSeven = " -Malala Yousafzai";
+const $authorEight = " -Katherine Hepburn";
+const $authorNine = " -Thich Nhat Hanh"; 
 
 //quotes Array
 const $quotes = [$quoteOne, $quoteTwo, $quoteThree, $quoteFour, $quoteFive, $quoteSix, $quoteSeven, $quoteEight, $quoteNine];
@@ -68,6 +68,21 @@ const $quotes = [$quoteOne, $quoteTwo, $quoteThree, $quoteFour, $quoteFive, $quo
     //generate author
     $authorText.text($author)
   })
-
+  
 })
 
+$("#tweet-quote").click(function() {
+  $("#tweet-quote").attr("href", stringToClickToTweetURL('"' + $randomQuote + '" - ' + $author));
+  //changes strings into click to tweet URLS
+function stringToClickToTweetURL(str) {
+
+  // Convert to Click to Tweet URL
+  var stringToConvert = str.split(" ").join("%20").split("@").join("%40").split("!").join("%21");
+
+  // Put 'Click to Tweet' URL suffix at the begining
+  var resultString = "https://twitter.com/intent/tweet?text=" + stringToConvert;
+
+  // Return properly formatted "Click to Tweet URL"
+  return resultString;
+}
+});

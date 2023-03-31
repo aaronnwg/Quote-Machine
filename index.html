@@ -10,20 +10,21 @@
 </head>
 <body>
     <header>Random Quote Machine</header>
+    
     <div id="wrapper">
+      <p id="instructions">Click "New Quote" to generate a random quote. Click the twitter icon to tweet a quote.</p>
       <div id="quote-box">
-        <div class="quote-text">
-          <span id="text">???</span>
+        <div id="quote-text">
+          <span id="text"></span>
         </div>
-        <div class="quote-author">
-            <span id="author">Yo</span>
-        </div>
-        <div class="buttons">
-          <a class="button" id="tweet-quote" title="Click to tweet this quote" target="_blank" href="twitter.com/intent/tweet"><img id="twitter" src='./images/Twitter-Logo-4169812109.png'></a>
-          <button class="button" id="new-quote">New quote</button>
+        <div id="quote-author">
+            <span id="author"></span>
         </div>
       </div>
-      <div class="footer">by <a href=>Aaron Kessler</a></div>
+        <div id="buttons">
+          <a class="button" id="tweet-quote" title="Click to tweet this quote" target="_blank" href="twitter.com/intent/tweet"><img id="twitter" src='./images/Twitter-Logo-4169812109.png'></a>
+          <button class="button" id="new-quote">New Quote</button>
+        </div>
     </div>
 <!--JS-->
     <script

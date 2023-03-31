@@ -1,27 +1,47 @@
-
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
 header {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 5rem;
-}
-
-
-#quote-box {
-    width: 450px;
-    height: 300px;
-    border-radius: 5px;
-    border: black solid 10px;;
-    margin: 0 auto;
-
-}
-
-#twitter {
-    height: 30px;
-    width: auto;
-
-}
-
-.footer {
-    text-align: center;
+    font-size: 2.5rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#instructions{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+#quote-box {
+    width: 700px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+}
+#text {
+    font-size: 2rem;
+    text-align: center;
+}
+#quote-author {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+#new-quote {
+    width: 9rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    position: absolute;
+    margin-top: 20px;
+}
+#buttons {
+    width: 700px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+#twitter {
+    height: 3rem;
+    width: auto;
+    padding-top: 20px;
 }
