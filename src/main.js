@@ -71,22 +71,22 @@ $(document).ready(() => {
 
     //tweet handler
   $tweet.on('click', () => {
-    $tweet.attr("href", stringToClickToTweetURL('"' + $randomQuote + '" - ' + $author));
+    $tweet.attr("href", stringToClickToTweetURL('"' + $randomQuote + '"  ' + $author));
 
     })
 
     //changes strings into click to tweet URLS
-function stringToClickToTweetURL(str) {
+  function stringToClickToTweetURL(str) {
 
-  // Convert to Click to Tweet URL
-  var stringToConvert = str.split(" ").join("%20").split("@").join("%40").split("!").join("%21");
-  console.log(stringToConvert)
-  // Put 'Click to Tweet' URL suffix at the begining
-  var resultString = `https://twitter.com/intent/tweet?text=${stringToConvert}`;
+    // Convert to Click to Tweet URL
+    var stringToConvert = str.split(" ").join("%20").split("@").join("%40").split("!").join("%21");
+    console.log(stringToConvert)
+    // Put 'Click to Tweet' URL suffix at the begining
+    var resultString = `https://twitter.com/intent/tweet?text=${stringToConvert}`;
 
-  // Return properly formatted "Click to Tweet URL"
-  return resultString;
-}   
+    // Return properly formatted "Click to Tweet URL"
+    return resultString;
+  }   
   });
 })
 
